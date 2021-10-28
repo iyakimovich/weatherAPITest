@@ -57,7 +57,7 @@ public class AccuWeatherAPIUtils {
         Call call = client.newCall(request);
         Response response = call.execute();
 
-        //returning full JSon
+        //returning full JSon as string
         return response.body().string();
     }
 
