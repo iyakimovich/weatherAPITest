@@ -33,7 +33,7 @@ public class AccuWeatherAPIUtils {
                 ObjectMapper mapper = new ObjectMapper();
                 JsonNode node = mapper.readTree(jsonResponse).get(0);
                 if (node != null) {
-                    result =  node.at("/Key").asText();
+                    result = node.at("/Key").asText();
                 }
             }
         }
