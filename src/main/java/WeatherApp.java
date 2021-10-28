@@ -6,6 +6,7 @@ public class WeatherApp {
         System.out.println("Enter city name: ");
         Scanner scanner = new Scanner(System.in);
 
+        //read city name from user
         String cityName = scanner.nextLine();
         String cityCode = "";
 
