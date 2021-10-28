@@ -16,13 +16,13 @@ public class WeatherApp {
             System.out.println("Cannot find city " + cityName + ". Error: " + e.getMessage());
         }
 
-        String forecast;
+        String forecastJSon;
         if (cityCode.equals("")) {
             System.out.println("Cannot find city " + cityName);
         } else {
             try {
-                forecast = AccuWeatherAPIUtils.get5DaysForecastJSon(cityCode);
-                System.out.println("Forecast " + forecast);
+                forecastJSon = AccuWeatherAPIUtils.get5DaysForecastJSon(cityCode);
+                System.out.println("Forecast JSon: " + forecastJSon);
             } catch (IOException e) {
                 System.out.println("Cannot find forecast for city code " + cityCode + ". Error: " + e.getMessage());
             }

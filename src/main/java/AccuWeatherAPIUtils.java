@@ -32,6 +32,7 @@ public class AccuWeatherAPIUtils {
             if (jsonResponse.length() > 0) {
                 ObjectMapper mapper = new ObjectMapper();
                 JsonNode node = mapper.readTree(jsonResponse).get(0);
+                //Check if node is empty (bad response)
                 if (node != null) {
                     result = node.at("/Key").asText();
                 }
@@ -56,6 +57,7 @@ public class AccuWeatherAPIUtils {
         Call call = client.newCall(request);
         Response response = call.execute();
 
+        //returning full JSon
         return response.body().string();
     }
 
